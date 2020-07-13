@@ -1,0 +1,21 @@
+.banner {
+  background-image: url(../images/bannerMobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 600px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-image: url(../images/bannerTablet.jpg);
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .banner {
+    background-image: url(../images/bannerDesktop.jpg);
+  }
+}

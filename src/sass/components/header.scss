@@ -1,0 +1,125 @@
+.header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-family: $logo-font;
+  font-size: 26px;
+  z-index: 4;
+  position: relative;
+}
+
+.nav__burger {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .nav__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+  }
+
+  .nav__burger > span {
+    position: absolute;
+    background-color: $white-color;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 13px;
+    transition: all 0.2s ease 0s;
+  }
+
+  .nav__burger:before,
+  .nav__burger:after {
+    content: '';
+    background-color: $white-color;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.2s ease 0s;
+  }
+
+  .nav__burger:before {
+    top: 0;
+  }
+
+  .nav__burger:after {
+    bottom: 0;
+  }
+
+  .nav__burger.active:before {
+    transform: rotate(45deg);
+    top: 14px;
+  }
+
+  .nav__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 14px;
+  }
+
+  .nav__burger.active > span {
+    transform: scale(0);
+  }
+
+  .nav__list {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: $burger-color;
+    padding-top: 150px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__list.active {
+    top: 0;
+  }
+
+  .nav__item + .nav__item {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 20px;
+  }
+}
