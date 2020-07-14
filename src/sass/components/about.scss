@@ -1,0 +1,45 @@
+.about__box {
+  height: 300px;
+  margin: auto;
+  transform: scale(0.8);
+}
+
+.about__image {
+  margin: auto;
+  width: 300px;
+  border-radius: 50%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about__text {
+  width: 280px;
+  line-height: 1.5;
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  font-family: $main-font;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__container {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 30% 70%;
+  }
+
+  .about__text {
+    line-height: 1.5;
+    text-align: start;
+    margin: 0;
+    font-size: 26px;
+    width: 100%;
+    align-self: center;
+  }
+
+  .about__box {
+    transform: scale(1);
+  }
+}

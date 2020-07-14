@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  height: 80px;
   width: 100%;
   top: 0;
   left: 0;
@@ -61,20 +62,26 @@
 }
 
 .header__text {
-  width: 300px;
-  height: 100px;
-  border: 3px solid $white-color;
-  font-size: 20px;
+  height: calc(100vh - 80px);
+  font-size: 24px;
   text-align: center;
-  background-color: rgba(36, 33, 33, 0.4);
   color: $white-color;
-  padding-top: 20px;
-  margin: auto;
-  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header__profession {
-  font-size: 18px;
+.header__name {
+  display: flex;
+  width: 300px;
+  height: 100px;
+  font-weight: 600;
+  font-family: $logo-font;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 3px solid $white-color;
+  background-color: rgba(36, 33, 33, 0.5);
 }
 
 @media screen and (max-width: 767px) {
@@ -178,6 +185,11 @@
   }
 
   .header__text {
+    font-size: 34px;
+  }
+
+  .header__name {
     width: 600px;
+    height: 100px;
   }
 }
