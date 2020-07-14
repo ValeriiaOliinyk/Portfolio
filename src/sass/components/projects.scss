@@ -1,5 +1,22 @@
 .projects {
-  background-color: $back-color;
+  background-image: linear-gradient(
+      to right,
+      rgba(9, 5, 47, 0.3) 0%,
+      rgba(60, 59, 63, 0.5) 100%
+    ),
+    url(../images/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.title-white {
+  color: $white-color;
+}
+
+.icon-white {
+  background-image: url(../images/icons/infinity-white.svg);
 }
 
 .projects__list {
@@ -8,36 +25,51 @@
 }
 
 .projects__items {
-  max-width: 280px;
-  background-color: green;
+  max-width: 300px;
 }
 
 .projects__image {
   width: 100%;
-  height: 200px;
-  display: block;
+  height: 190px;
   object-fit: cover;
   object-position: top;
 }
 
 .projects__text {
-  background-color: $white-color;
-  width: 100%;
+  background-color: rgba(4, 6, 10, 0.6);
+  padding: 5px;
   height: 100px;
-  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
-.triangle {
-  position: absolute;
-  top: 80%;
-  right: 43%;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid $back-color;
-  z-index: 20;
+.projects__title {
+  font-size: 20px;
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 700;
+  padding-bottom: 5px;
 }
+
+.projects__paragraph {
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+// .triangle {
+//   position: absolute;
+//   top: 80%;
+//   right: 43%;
+//   width: 0;
+//   height: 0;
+//   border-left: 20px solid transparent;
+//   border-right: 20px solid transparent;
+//   border-bottom: 20px solid $white-color;
+//   z-index: 20;
+// }
 
 @media screen and (max-width: 767px) {
   .projects__items + .projects__items {
@@ -56,10 +88,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
-  .projects__items {
-    max-width: 350px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -71,5 +99,13 @@
 @media screen and (min-width: 1200px) {
   .projects__items:nth-child(-n + 3) {
     margin-bottom: 20px;
+  }
+
+  .projects__image {
+    height: 240px;
+  }
+
+  .projects__items {
+    max-width: 380px;
   }
 }
