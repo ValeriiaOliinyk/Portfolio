@@ -43,6 +43,10 @@
   font-size: 28px;
   position: relative;
   line-height: 2;
+  &:hover:after,
+  &:focus:after {
+    width: 100%;
+  }
 }
 
 .nav__link:after {
@@ -54,11 +58,6 @@
   background-color: $hover-color;
   content: '';
   transition: width 0.3s ease-out;
-}
-
-.nav__link:hover:after,
-.nav__link:focus:after {
-  width: 100%;
 }
 
 .header__text {
