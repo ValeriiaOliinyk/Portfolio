@@ -1,0 +1,39 @@
+.contacts {
+  background-color: $burger-color;
+  height: 500px;
+}
+
+.contacts__list {
+  width: 300px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.contacts__item + .contacts__item {
+  margin-top: 20px;
+}
+
+.contacts__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts__link--skype {
+  background-image: url(../images/icons/skype-1.svg);
+}
+
+.contacts__link--github {
+  background-image: url(../images/icons/github.svg);
+}
+
+.contacts__link--linkedin {
+  background-image: url(../images/icons/linkedin-1.svg);
+}
+
+.contacts__link--text {
+  text-align: center;
+}

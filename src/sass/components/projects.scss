@@ -11,14 +11,6 @@
   background-attachment: fixed;
 }
 
-.title-white {
-  color: $white-color;
-}
-
-.icon-white {
-  background-image: url(../images/icons/infinity-white.svg);
-}
-
 .projects__list {
   margin: auto;
   margin-top: 30px;
@@ -113,7 +105,7 @@
   font-family: $main-font;
   font-weight: 600;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 767px) {
@@ -132,6 +124,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .projects__paragraph {
+    font-size: 14px;
   }
 }
 

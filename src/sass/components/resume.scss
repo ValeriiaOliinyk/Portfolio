@@ -1,0 +1,39 @@
+.resume__box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}
+
+.resume__title {
+  font-size: 18px;
+  font-family: $main-font;
+}
+
+.resume__icon {
+  display: block;
+  background-image: url(../images/icons/download.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .resume__box {
+    width: 450px;
+    height: 150px;
+  }
+
+  .resume__title {
+    font-size: 26px;
+  }
+
+  .resume__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
