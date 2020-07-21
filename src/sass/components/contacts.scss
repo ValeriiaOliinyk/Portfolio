@@ -1,17 +1,32 @@
 .contacts {
   background-color: $burger-color;
-  height: 500px;
+  height: 300px;
 }
 
 .contacts__list {
-  width: 300px;
-  height: 500px;
   margin: auto;
-  text-align: center;
+  margin-top: 50px;
 }
 
 .contacts__item + .contacts__item {
-  margin-top: 20px;
+  margin-top: 50px;
+}
+
+.contacts__item {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+}
+
+.contacts__item--contact {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contacts__item--icons {
+  justify-content: space-around;
 }
 
 .contacts__link {
@@ -20,6 +35,11 @@
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
+  transition: transform 250ms linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .contacts__link--skype {
@@ -36,4 +56,41 @@
 
 .contacts__link--text {
   text-align: center;
+  color: $link-color;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 250ms linear;
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+.contacts__item--icon {
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    height: 400px;
+  }
+
+  .contacts__link--text {
+    font-size: 20px;
+  }
+
+  .contacts__item {
+    width: 400px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    height: 460px;
+  }
+
+  .contacts__item {
+    height: 80px;
+  }
 }
